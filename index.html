@@ -3,196 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaShop | Modern Online Store</title>
+    <title>NovaShop</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="index.html">NovaShop</a>
 
-            <ul>
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
 
-                <li>
-                    <a href="">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Products
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Categories
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Contact
-                    </a>
-                </li>
+        <a class="logo" href="#">NovaShop</a>
 
-            </ul>
+        <div class="menu-toggle">☰</div>
 
-            <div>
-                <a href="#">Sign In</a>
-                <a href="#">Cart</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-    <div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <a href="#">Sign In</a>
+
+            <a href="#" class="cart-btn">
+                Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+
+    <div class="hero-text">
         <h1>Discover Modern Tech Products</h1>
 
         <p>
-            Explore the latest gadgets, accessories and digital products at NovaShop.
+            Best gadgets, accessories and digital products in one place.
         </p>
 
-        <div>
-            <a href="#">Shop Now</a>
-            <a href="#">View Products</a>
+        <div class="hero-buttons">
+            <a href="#products" class="btn primary">Shop Now</a>
+            <a href="#products" class="btn outline">View Products</a>
         </div>
     </div>
 
-    <div>
-        <img src="https://learn.zoner.com/wp-content/uploads/2025/04/zoner-ai-image-creator.jpg" alt="Hero Image">
+    <div class="hero-image">
+        <img src="https://learn.zoner.com/wp-content/uploads/2025/04/zoner-ai-image-creator.jpg" alt="hero">
     </div>
+
 </section>
-        <section class="features">
-    <h2>Why Choose NovaShop?</h2>
+
+<!-- ================= FEATURES ================= -->
+<section id="features" class="features">
+
+    <h2>Why Choose Us?</h2>
 
     <div class="features-container">
 
-        <div class="feature-card">
+        <div class="card">
             <h3>Fast Delivery</h3>
-            <p>Get your products delivered quickly and safely.</p>
+            <p>Quick shipping worldwide</p>
         </div>
 
-        <div class="feature-card">
+        <div class="card">
             <h3>Secure Payment</h3>
-            <p>100% secure payment system for all transactions.</p>
+            <p>100% safe transactions</p>
         </div>
 
-        <div class="feature-card">
+        <div class="card">
             <h3>Best Quality</h3>
-            <p>We provide high quality products only.</p>
+            <p>High quality products only</p>
         </div>
 
     </div>
+
 </section>
 
-        <section class="pricing">
-    <h2>Simple Pricing</h2>
+<!-- ================= PRODUCTS ================= -->
+<section id="products" class="products">
 
-    <div class="pricing-container">
+    <h2>Products</h2>
 
-        <div class="pricing-card">
-            <h3>Basic</h3>
-            <p class="price">$9.99</p>
-            <p>Good for beginners</p>
+    <div class="products-container">
+
+        <div class="product-card">
+            <h3>Headphones</h3>
+            <p>$50</p>
+
+            <button class="add-to-cart" data-name="Headphones" data-price="50">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="pricing-card featured">
-            <h3>Pro</h3>
-            <p class="price">$19.99</p>
-            <p>Most popular choice</p>
+        <div class="product-card">
+            <h3>Smart Watch</h3>
+            <p>$90</p>
+
+            <button class="add-to-cart" data-name="Smart Watch" data-price="90">
+                Add to Cart
+            </button>
         </div>
 
-        <div class="pricing-card">
-            <h3>Premium</h3>
-            <p class="price">$29.99</p>
-            <p>For professionals</p>
+        <div class="product-card">
+            <h3>Gaming Mouse</h3>
+            <p>$30</p>
+
+            <button class="add-to-cart" data-name="Gaming Mouse" data-price="30">
+                Add to Cart
+            </button>
         </div>
 
     </div>
+
 </section>
 
-        <section class="testimonials">
-    <h2>What Our Customers Say</h2>
+<!-- ================= CART BOX ================= -->
+<div class="cart-box">
 
-    <div class="testimonials-container">
+    <h3>Your Cart</h3>
 
-        <div class="testimonial-card">
-            <p>"NovaShop has the fastest delivery I've ever seen!"</p>
-            <h4>- Alex</h4>
-        </div>
+    <ul id="cart-list"></ul>
 
-        <div class="testimonial-card">
-            <p>"Great quality products and amazing support."</p>
-            <h4>- Sara</h4>
-        </div>
+    <p>
+        Total: $<span id="cart-total">0</span>
+    </p>
 
-        <div class="testimonial-card">
-            <p>"I always shop here. Totally reliable!"</p>
-            <h4>- John</h4>
-        </div>
+</div>
 
-    </div>
-</section>
+<!-- ================= FOOTER ================= -->
+<footer>
 
-        <section class="faq">
-    <h2>Frequently Asked Questions</h2>
+    <p>© 2026 NovaShop. All rights reserved.</p>
 
-    <div class="faq-container">
-
-        <div class="faq-item">
-            <h3>How long does delivery take?</h3>
-            <p>Delivery usually takes 2-5 business days depending on your location.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Is payment secure?</h3>
-            <p>Yes, all payments are encrypted and 100% secure.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>Can I return a product?</h3>
-            <p>Yes, you can return products within 14 days of purchase.</p>
-        </div>
-
-    </div>
-</section>
-    </main>
-
-    <footer class="footer">
-    <div class="footer-container">
-
-        <div class="footer-box">
-            <h3>NovaShop</h3>
-            <p>Your modern online store for tech products.</p>
-        </div>
-
-        <div class="footer-box">
-            <h3>Quick Links</h3>
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Categories</a>
-        </div>
-
-        <div class="footer-box">
-            <h3>Support</h3>
-            <a href="#">Contact</a>
-            <a href="#">FAQ</a>
-            <a href="#">Help Center</a>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 NovaShop. All rights reserved.</p>
-    </div>
 </footer>
 
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cart-overlay"></div>
 
+<!-- CART SIDEBAR -->
+<div class="cart-modal" id="cart-modal">
 
-    <script src="js/main.js"></script>
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button id="close-cart">✖</button>
+    </div>
+
+    <ul id="cart-list"></ul>
+
+    <p>Total: $<span id="cart-total">0</span></p>
+
+</div>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
